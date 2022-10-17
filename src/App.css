@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-container{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #1A1D28;
+  min-height: 100vh;
+}
+
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 10px;
+  padding: 20px 10px;
+}
+form input{
+  padding: 8px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.26);
+  outline-color: rgb(6, 150, 240);
+  border: none;
+}
+.input-box{
+  display: flex;
+  flex-direction: column;
+}
+.input-box label{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.form-container input[type=submit]{
+  background-color: gray;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  margin-top: 10px;
+  transition: all 0.1s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-container input[type=submit]:hover{
+  background-color: lightslategray;
+  cursor: pointer;
+}
+
+.form-container input[type=submit]:active{
+  scale: 95%;
+}
+h4{
+  color: white;
+}
+
+/* if any error in form  */
+.input-error{
+  border: 2px solid tomato;
+  outline-color: tomato;
+}
+
+.error-message{
+  color: tomato;
+  font-size: 12px;
 }
